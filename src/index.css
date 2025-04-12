@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-snap-type: mandatory;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: linear-gradient(90deg, #12071f, #2f204e);
+    color: white;
+}
+
+.container{
+    max-width: 1536px;
+    padding-left: 16px;
+    padding-right: 16px;
+    /* background-color: rebeccapurple; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section{
+    scroll-snap-align: center;
+    height:100vh;
+}
+
+@media (min-width:640px){
+    .container{
+        max-width: 640px;
+    }
+}
+
+@media (min-width:768px){
+    .container{
+        max-width: 768px;
+    }
+}
+
+@media (min-width:1024px){
+    .container{
+        max-width: 1024px;
+    }
+}
+
+
