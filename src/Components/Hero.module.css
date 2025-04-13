@@ -1,3 +1,104 @@
 .hero{
     height: 100vh;
+    display: flex;      /*Ensures that the left and right hero sections don't get sticked.*/
+    flex-direction: row;
+}
+
+.hero_left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: normal;
+}
+ 
+.hero_right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: end;
+}
+
+
+/* Hero Left Part */
+.title{
+    color: pink;
+    font-size:60px;
+}
+
+.name{
+    color: white;
+}
+
+.award_list{
+    width:200px;
+    display:inline-flex;
+    justify-content: space-around
+}
+
+
+.certificate{
+    width: 200px;
+}
+
+.hackerrank{
+    height:90px;
+    width: 90px;
+}
+
+/* Hero Right Part */
+
+.follow{
+    width:200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.instagramFollowIcons{
+    margin-bottom: 50px;
+    margin-left: 20px;
+    border-radius: 50px;
+    height:60px;
+    width: 60px;;
+}
+
+.facebookFollowIcons{
+    border-radius: 20px;
+    margin-right: 10px;
+    height: 35px;
+    width: 35px;;
+}
+
+.linkedinFollowIcons{
+    border-radius: 20px;
+    margin-top: 11px;
+    height: 37px;
+    width: 37px;
+}
+
+.contact_button{
+    align-items: center;
+}
+
+.circleText{
+    font-size: 14px;
+}
+
+.heroBackground {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+  }
+
+.hImg{
+    position: index;
+    z-index: -1; 
 }
