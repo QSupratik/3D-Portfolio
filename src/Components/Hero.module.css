@@ -88,6 +88,12 @@
     font-size: 14px;
 }
 
+.contactmeIcon{
+    height: 40%;
+    width: 80%;
+    border-radius: 50px;
+}
+
 .heroBackground {
     position: relative;
     width: 100%;
@@ -99,6 +105,28 @@
   }
 
 .hImg{
-    position: index;
+    position: absolute;
+    bottom: 0;
     z-index: -1; 
+}
+
+
+
+/* Making Responsive Design */
+@media (max-width:1200px){
+    .title{
+        font-size: 60px;
+    }
+}
+
+@media (max-width:1000px){
+    .title{
+        font-size: 50px;
+    }
+}
+
+@media (max-width:700px){
+    .title{
+        font-size: 35px;
+    }
 }

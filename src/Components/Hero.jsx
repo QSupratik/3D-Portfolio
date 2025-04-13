@@ -16,7 +16,7 @@ function Hero() {
             <div className={styles.hero_left}>
 
                 {/* Heading Section */}
-                <motion.h1 className={styles.title}>
+                <motion.h1 initial={{y:-100, opacity:0}} animate={{y:0, opacity:1}} transition={{duration:2}} className={styles.title}>
                     Hi There!
                      <br />
                     <span className={styles.name}>I am Supratik</span>
@@ -47,7 +47,7 @@ function Hero() {
             <div className={styles.hero_right}>
 
                 {/*Follow Part*/}
-                <div className={styles.follow}>
+                <motion.div animate={{y:[-100,0], opacity:[0,1]}} transition={{duration:2}} className={styles.follow}>
                     <a href="/">
                         <img src={insta} className={styles.instagramFollowIcons}></img>
                     </a>
@@ -57,13 +57,13 @@ function Hero() {
                     <a href="/">
                         <img src={linkedin} className={styles.linkedinFollowIcons}></img>
                     </a>
-                </div>
+                </motion.div>
 
                 {/* Speech Bubble */}
                 <SpeechBubble></SpeechBubble>
 
                 {/* Contact Me */}
-                <div className={styles.contact_button}>
+                <motion.div animate={{ rotate:[0,360]}} transition={{duration:10,repeat:Infinity}} className={styles.contact_button}>
                     <a href="/#contact">
                         <svg width="100" height="100" viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="40" fill="pink" />
@@ -72,7 +72,7 @@ function Hero() {
                             </text>
                         </svg>
                     </a>
-                </div>
+                </motion.div>
             </div>
 
         </div>
