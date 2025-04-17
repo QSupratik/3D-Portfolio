@@ -23,3 +23,12 @@
 .changingText{
     font-size: 20px;
 }
+
+@media(max-width:550px){
+    .bubble{
+        display:none;
+    }
+    .manImage{
+        display: none;
+    }
+}

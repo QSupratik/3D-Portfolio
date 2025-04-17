@@ -1,5 +1,5 @@
 import styles from "./SpeechBubble.module.css";
-import man from "../Images/man.png";
+import man from "../../Images/man.png";
 import { TypeAnimation } from 'react-type-animation';
 
 function SpeechBubble() {

@@ -1,12 +1,13 @@
 import styles from "./Hero.module.css";
 import SpeechBubble from "./SpeechBubble.jsx";
 import {motion} from "motion/react";
+import RotatingFigure from "./RotatingFigure.jsx";
 
-import insta from "../Images/instagram.png";
-import facebook from "../Images/facebook.png";
-import linkedin from "../Images/linkedin.png";
-import hackerrank from "../Images/hackerrank.png";
-import me from "../Images/me.png";
+import insta from "../../Images/instagram.png";
+import facebook from "../../Images/facebook.png";
+import linkedin from "../../Images/linkedin.png";
+import hackerrank from "../../Images/hackerrank.png";
+import me from "../../Images/me.png";
 
 function Hero() {
     return (
@@ -39,8 +40,9 @@ function Hero() {
 
             {/* Background Features */}
             <div className="heroBackground">
-                <p align="center" className={styles.hImg}><img src={me} alt="My image"/>
-                </p>
+                <img src={me} alt="My image"/>
+                <RotatingFigure className={styles.rotatingFigure}/>
+                
             </div>
 
             {/* Right Side of Hero Section */}

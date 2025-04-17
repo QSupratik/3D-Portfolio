@@ -1,4 +1,4 @@
-import Hero from "./Components/Hero.jsx";
+import Hero from "./Components/Hero/Hero.jsx";
 import Services from "./Components/Services.jsx";
 import Portfolio from "./Components/Portfolio.jsx";
 import Contact from "./Components/Contact.jsx";
