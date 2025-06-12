@@ -1,7 +1,7 @@
 import Hero from "./Components/Hero/Hero.jsx";
-import Services from "./Components/Services.jsx";
-import Portfolio from "./Components/Portfolio.jsx";
-import Contact from "./Components/Contact.jsx";
+import Services from "./Components/Services/Services.jsx";
+import Portfolio from "./Components/Portfolio/Portfolio.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
 
 const App = () => {
   return (
@@ -13,5 +13,4 @@ const App = () => {
     </div>
   )
 }
-
 export default App

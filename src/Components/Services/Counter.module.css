@@ -1,0 +1,16 @@
+p{
+    font-size: 14px;
+}
+
+h1{
+    color: #dd4c62;
+}
+
+@media (max-width:600px){
+    h1{
+        font-size: 21px;
+    }
+    p{
+        font-size: 10px;
+    }
+}

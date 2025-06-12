@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import SpeechBubble from "./SpeechBubble.jsx";
-import {motion} from "motion/react";
-import RotatingFigure from "./RotatingFigure.jsx";
+import { motion } from "motion/react";
+import React, { Suspense } from 'react';
 
 import insta from "../../Images/instagram.png";
 import facebook from "../../Images/facebook.png";
@@ -9,17 +9,20 @@ import linkedin from "../../Images/linkedin.png";
 import hackerrank from "../../Images/hackerrank.png";
 import me from "../../Images/me.png";
 
+const RotatingFigure = React.lazy(() => import("./RotatingFigure.jsx"));
+
+
 function Hero() {
     return (
         <div className={styles.hero}>
-            
+
             {/* Left Side of Hero Section */}
             <div className={styles.hero_left}>
 
                 {/* Heading Section */}
-                <motion.h1 initial={{y:-100, opacity:0}} animate={{y:0, opacity:1}} transition={{duration:2}} className={styles.title}>
+                <motion.h1 initial={{ y: -100, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 2 }} className={styles.title}>
                     Hi There!
-                     <br />
+                    <br />
                     <span className={styles.name}>I am Supratik</span>
                 </motion.h1>
 
@@ -39,17 +42,20 @@ function Hero() {
             </div>
 
             {/* Background Features */}
-            <div className="heroBackground">
-                <img src={me} alt="My image"/>
-                <RotatingFigure className={styles.rotatingFigure}/>
-                
+            <div className={styles.heroBackground}>
+                <Suspense fallback="loading...">
+                <RotatingFigure className={styles.rotatingFigure} />
+                </Suspense>
+                <img src={me} alt="My image" className={styles.myImage} />
             </div>
+
+
 
             {/* Right Side of Hero Section */}
             <div className={styles.hero_right}>
 
                 {/*Follow Part*/}
-                <motion.div animate={{y:[-100,0], opacity:[0,1]}} transition={{duration:2}} className={styles.follow}>
+                <motion.div animate={{ y: [-100, 0], opacity: [0, 1] }} transition={{ duration: 2 }} className={styles.follow}>
                     <a href="/">
                         <img src={insta} className={styles.instagramFollowIcons}></img>
                     </a>
@@ -65,7 +71,7 @@ function Hero() {
                 <SpeechBubble></SpeechBubble>
 
                 {/* Contact Me */}
-                <motion.div animate={{ rotate:[0,360]}} transition={{duration:10,repeat:Infinity}} className={styles.contact_button}>
+                <motion.div animate={{ rotate: [0, 360] }} transition={{ duration: 10, repeat: Infinity }} className={styles.contact_button}>
                     <a href="/#contact">
                         <svg width="100" height="100" viewBox="0 0 100 100">
                             <circle cx="50" cy="50" r="40" fill="pink" />

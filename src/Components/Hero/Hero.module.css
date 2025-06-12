@@ -2,6 +2,8 @@
     height: 100vh;
     display: flex;      /*Ensures that the left and right hero sections don't get sticked.*/
     flex-direction: row;
+    overflow: hidden;
+    position: relative;
 }
 
 .hero_left{
@@ -96,32 +98,37 @@
 
 .heroBackground {
     position: absolute;
-    top:50%;
-    left:50%;
-    /* transform:translate(-50%, -50%); */
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: -1;
+    /* z-index: -1; */
     pointer-events: none;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* ✅ sticks everything to the bottom */
   }
-
-
-.rotatingFigure{
-    position:absolute;
-    z-index: -3;
-    width: 100%;   /* or 100%, or whatever you want */
-    height: 100%;
-}
-/* .hImg{
+  
+  .myImage {
     position: absolute;
     bottom: 0;
-    z-index: -1; 
-} */
-
-
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60%;
+    z-index: -1;
+}
+  
+  /* ✅ Full background for rotating model */
+  .rotatingFigure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+  }
+   
 
 /* Making Responsive Design */
 @media (max-width:1200px){
